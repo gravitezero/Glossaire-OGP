@@ -1,290 +1,309 @@
 \documentclass[12pt,a4paper,twoside]{article}
 
 \usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{xifthen}
+\usepackage[T1]{fontenc}
 
 \title{Glossaire OGP}
 \author{texification : Etienne Brodu}
 \date{Novembre 2010}
 
+\newcommand{\definition}[3]{
+	\begin{minipage}{\textwidth}
+		\textbf{\large{#1}}\\
+		\rule{\textwidth}{0.5pt}
+		#2\\
+		\ifthenelse{\isempty{#3}}%
+	    {}%
+	    {\rule{\textwidth}{0.25pt}\\\textit{#3}}%
+    \end{minipage}
+    \\\\
+}
+
 \begin{document}
 \maketitle
-\def{Action}
+\newpage
+~
+\newpage
+
+\definition{Action}
 {
-	L’\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/actions.htm}{action} est un événement ou un ensemble d’événements ayant pour but et pour effet :
+	L'\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/actions.htm}{action} est un événement ou un ensemble d'événements ayant pour but et pour effet :
 	\begin{itemize}
-	\item de modifier les caractéristiques d’un \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/garticle.htm}{article} ou d’un \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/lencours.htm}{en-cours}
+	\item de modifier les caractéristiques d'un \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/garticle.htm}{article} ou d'un \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/lencours.htm}{en-cours}
 	\item de la déplacer
-	\item de laisser s’écouler le temps
+	\item de laisser s'écouler le temps
 	\end{itemize}
-	(norme AFNOR NF X50-310 ).
-	Une action décrit une \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/glestach.htm}{tâche} dans l’entreprise, réalisée au moyen de \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/ressources.htm}{ressources}, et se définit comme le niveau élémentaire du processus de fabrication.\\
-	Une action élémentaire peut être :
+	(norme AFNOR NF X50-310 ).\\
+	Une action décrit une \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/glestach.htm}{tâche} dans l'entreprise, réalisée au moyen de \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/ressources.htm}{ressources}, et se définit comme le niveau élémentaire du processus de fabrication.\\
+	Une action élémentaire peut être :
 	\begin{itemize}
-	\item action de transformation : l’\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/actions.htm}{opération}
-	\item action de déplacement : le \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/letransfert.htm}{transfert} ou transport
-	\item action d’attente : le stockage (voir le \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/Le_stock/lestock.htm}{stock})
+	\item action de transformation : l'\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/actions.htm}{opération}
+	\item action de déplacement : le \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/letransfert.htm}{transfert} ou transport
+	\item action d'attente : le stockage (voir le \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/Le_stock/lestock.htm}{stock})
 	\end{itemize}
-	Le  href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/glecontroledeconformite.htm}{contrôle de conformité} est une action particulière qui a pour objet de vérifier la bonne exécution des trois autres types d’actions.	
+	Le \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/glecontroledeconformite.htm}{contrôle de conformité} est une action particulière qui a pour objet de vérifier la bonne exécution des trois autres types d'actions.
 }{}
 
-\def{Agilité}
+\definition{Agilité}
 {
-	Capacité de l’entreprise à se reconfigurer en fonction des évolutions de son environnement, de son marché
-	}{07/11/2006 : 6}
+	Capacité de l'entreprise à se reconfigurer en fonction des évolutions de son environnement, de son marché
+	}{07/11/2006 : 6}
 
-\def{Approvisionnement automatique}
+\definition{Approvisionnement automatique}
 {
 	Date fixe, quantité fixe
-	}{23/10/2006 : 3 - 6}
+	}{23/10/2006 : 3~--~6}
 
-\def{Approvisionnement au point de commande}
+\definition{Approvisionnement au point de commande}
 {
 	Date variable, quantité fixe
-	}{23/10/2006 : 3 - 6}
+	}{23/10/2006 : 3~--~6}
 
-\def{Approvisionnement par Achats opportunistes}
+\definition{Approvisionnement par Achats opportunistes}
 {
 	Date variable, quantité variable
-	}{23/10/2006 : 3 - 7}
+	}{23/10/2006 : 3~--~7}
 
-\def{Approvisionnement par re-complètement}
+\definition{Approvisionnement par re-complètement}
 {
 	Date fixe, quantité variable
-	}{23/10/2006 : 3 - 6}
+	}{23/10/2006 : 3~--~6}
 
-\def{APS}
+\definition{APS}
 {
 	Programme de Planification Avancée
-	}{08/11/2006 : 11}
+	}{08/11/2006 : 11}
 
-\def{Article acheté}
+\definition{Article acheté}
 {
-	Possède une unité de gestion et une unité d’achat
+	Possède une unité de gestion et une unité d'achat
 	}{}
 
-\def{Article fantôme / virtuel}
+\definition{Article fantôme / virtuel}
 {
 	Ne possède pas de gamme de fabrication.
 	Est créé au niveau de la nomenclature pour représenter des sous-ensembles qui ne sont pas physiquement stockés mais directement incorporés dans le composé.	
 	}{}
 	
-\def{ATO}
+\definition{ATO}
 {
 	Assemble To Order (assemblage) ) / Stratégie de pilotage à la commande
-	}{13/11/2006 : 2}
+	}{13/11/2006 : 2}
 	
-\def{Besoin brut}
+\definition{Besoin brut}
 {
 	= besoins indépendants
 	}{}
 	
-\def{Besoins internes}
+\definition{Besoins internes}
 {
-	Ce sont les besoins engendrés par l’éclatement des besoins des ordres de fabrications fermes ou suggérés de niveau supérieur lors du calcul des besoins.
+	Ce sont les besoins engendrés par l'éclatement des besoins des ordres de fabrications fermes ou suggérés de niveau supérieur lors du calcul des besoins.
 	}{}
 	
-\def{Besoin net}
+\definition{Besoin net}
 {
-	$= besoin brut – stock$\\
-	Correspond aux suggestions d’approvisionnement
+	= besoin brut – stock\\
+	Correspond aux suggestions d'approvisionnement
 	}{}
 
-\def{BFR}
+\definition{BFR}
 {
 	Besoin en Fonds de Roulement
-	}{08/11/2006 : 16}
+	}{08/11/2006 : 16}
 
-\def{BPR}
+\definition{BPR}
 {
-	Principes d’amélioration des systèmes de production
-	}{08/11/2006 : 18}
+	Principes d'amélioration des systèmes de production
+	}{08/11/2006 : 18}
 
-\def{CBN}
+\definition{CBN}
 {
 	Calcul des Besoins Net équivalent à MRP.\\
 	Différence entre besoins bruts et stock.
 	}{}
 
-\def{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/lecalcul.htm}{Calcul de charge}}
+\definition{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/lecalcul.htm}{Calcul de charge}}
 {
-	On calcule la charge correspondant au plan de fabrication jalonné. Le  \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/jalonnem.htm}{jalonnement} étant fait à  \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/capacit%C3%A9limit%C3%A9e.htm}{capacité illimité TODO}, des surcharges sont possibles sur certaines ressources pour une période donnée. Dans l’éventualité d’une surcharge, il faut réaliser un \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/lajustem.htm}{ajustement de charge}.
+	On calcule la charge correspondant au plan de fabrication jalonné. Le \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/jalonnem.htm}{jalonnement} étant fait à capacité illimité, des surcharges sont possibles sur certaines ressources pour une période donnée. Dans l'éventualité d'une surcharge, il faut réaliser un \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/lajustem.htm}{ajustement de charge}.
 	}{}
 	
-\def{Campagne}
+\definition{Campagne}
 {
 	Une campagne de production fixe une période de production et une quantité à produire. Adaptée à des productions de masse, elle se caractérise par différents services et méthodes de suivi.
 	}{}
 	
-\def{Capacité}
+\definition{Capacité}
 {
-	$= coeff capacité * coeff rendement * nbHeures$
+	= coeff capacité * coeff rendement * nbHeures
 	}{}
 	
-\def{Chevauchement}
+\definition{Chevauchement}
 {
-	Il existe chevauchement d’opérations et chevauchement d’ordres de fabrication
+	Il existe chevauchement d'opérations et chevauchement d'ordres de fabrication
 	}{}			
 	
-\def{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/le_chevauchement.htm}{Chevauchement d’opérations}}
+\definition{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/le_chevauchement.htm}{Chevauchement d'opérations}}
 {
-	C’est une technique d'\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/ordonnac.htm}{ordonnancement} visant à réduire la durée du cycle de production pour un \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/lesordres.htm}{ordre de fabrication} donné consistant a débuter une action sur une partie d’un \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/leslots.htm}{lot de fabrication} avant que l’\href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLesactions.htm}{action} précédente ne soit achevée sur la totalité du lot correspondant à cette action.\\
+	C'est une technique d'\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/ordonnac.htm}{ordonnancement} visant à réduire la durée du cycle de production pour un \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/lesordres.htm}{ordre de fabrication} donné consistant a débuter une action sur une partie d'un \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/leslots.htm}{lot de fabrication} avant que l'\href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLesactions.htm}{action} précédente ne soit achevée sur la totalité du lot correspondant à cette action.\\
 	(norme AFNOR NF X 50-310).
 	}{}	
 		
-\def{Chevauchement d’ordres de fabrication}
+\definition{Chevauchement d'ordres de fabrication}
 {
-	C’est une technique assez rare d’ordonnancement visant à réduire la durée du cycle de production pour un ensemble d’ordres de fabrication donné, consistant a débuter une action sur un ordre de fabrication avant que les actions ne soient achevées en totalité.\\
+	C'est une technique assez rare d'ordonnancement visant à réduire la durée du cycle de production pour un ensemble d'ordres de fabrication donné, consistant a débuter une action sur un ordre de fabrication avant que les actions ne soient achevées en totalité.\\
 	(norme AFNOR NF X 50-310).
 	}{}	
 		
-\def{Code de plus bas niveau}
+\definition{Code de plus bas niveau}
 {
-	Indique la position d’un article dans l’ensemble des nomenclatures quelles que soit les dates de validité des liens.
+	Indique la position d'un article dans l'ensemble des nomenclatures quelles que soit les dates de validité des liens.
 	}{}	
 		
-\def{Coefficient de capacité}
+\definition{Coefficient de capacité}
 {
 	Le coefficient de capacité représente le temps effectif du travail rapporté au temps défini dans le calendrier standard. Il est fonction du temps et peut dépasser 1.
 	}{}	
 			
-\def{Coefficient de rendement}
+\definition{Coefficient de rendement}
 {
 	Coefficient de rendement standard de la machine.\\
 	Permet de déterminer la capacité pratique de la machine (obligatoire). Ainsi, si une plage horaire de 8 heures a été définie sur la calendrier de la machine, un coefficient de rendement de 0,80 conduira à créer une plage horaire de 6,40 heures sur le planning des machines.
 	}{}	
 			
-\def{Concepteur}
+\definition{Concepteur}
 {
 	Conçoit les produits
 	}{}	
 			
-\def{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_controle_de_gestion/lecontrole_de_gestion.htm}{Contrôle de gestion}}
+\definition{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_controle_de_gestion/lecontrole_de_gestion.htm}{Contrôle de gestion}}
 {
-	Cette fonction a pour objectif d’établir des bases prévisionnelles de gestion, et d’analyser les coûts. Elle estime le coût de revient d’un \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_commercial_achats/fonction_commerciale.htm}{produit} a priori d’après la \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLabasededonneestechnique.htm}{base de données technique}, et a posteriori grâce aux données réelles recueillies. Une analyse globale est faite pour savoir si le produit est rentable pour l’entreprise.\\
-Cette fonction prévoit et analyse les performances économiques de l’entreprise, et recherche l’origine des résultats et des écarts entre prévision et réalisation
+	Cette fonction a pour objectif d'établir des bases prévisionnelles de gestion, et d'analyser les coûts. Elle estime le coût de revient d'un \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_commercial_achats/fonction_commerciale.htm}{produit} a priori d'après la \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLabasededonneestechnique.htm}{base de données technique}, et a posteriori grâce aux données réelles recueillies. Une analyse globale est faite pour savoir si le produit est rentable pour l'entreprise.\\
+Cette fonction prévoit et analyse les performances économiques de l'entreprise, et recherche l'origine des résultats et des écarts entre prévision et réalisation
 	}{}	
 			
-\def{CTO}
+\definition{CTO}
 {
 	Configure To Order (configuration) ) / Stratégie de pilotage à la commande
-	}{13/11/2006 : 2}	
+	}{13/11/2006 : 2}	
 			
-\def{Délai d’approvisionnement}
+\definition{Délai d'approvisionnement}
 {
 	Délai entre la commande et la réception du produit.
 	}{}	
 			
-\def{Délai d’obtention}
+\definition{Délai d'obtention}
 {
-	$= délai de livraison + temps de contrôle qualité$
+	= délai de livraison + temps de contrôle qualité
 	}{}	
 			
-\def{Différentiation avancée}
+\definition{Différentiation avancée}
 {
-	On différentie très tôt les différents produits des \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/lesclients.htm}{clients} (Attention aux délais !).
-	}{08/11/2006 : 10}
-				
-\def{Différentiation retardée}
+	On différentie très tôt les différents produits des \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/lesclients.htm}{clients} (Attention aux délais !).
+	}{08/11/2006 : 10}
+
+\definition{Différentiation retardée}
 {
 	On différentie très tard donc on a des produits standards qui sont déjà bien avancés.
-	}{08/11/2006 : 10}	
+	}{08/11/2006 : 10}	
 				
-\def{DRP}
+\definition{DRP}
 {
 	Distribution Requirements Planning
-	}{08/11/2006 : 14}	
+	}{08/11/2006 : 14}	
 				
-\def{EIS}
+\definition{EIS}
 {
-	Système d’Information pour Exécutifs.
-	}{08/11/2006 : 18}	
+	Système d'Information pour Exécutifs.
+	}{08/11/2006 : 18}	
 				
-\def{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/lencours.htm}{En-cours}}
+\definition{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/lencours.htm}{En-cours}}
 {
-	A un moment donné et pour un \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/garticle.htm}{article} $A$ donné, L’en-cours est l’ensemble des matières constituantes de cet article $A$ ne faisant plus partie du \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/Le_stock/lestock.htm}{stock} du fait des \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/actions.htm} actions déjà exécutées à cet instant (sorties de stocks, \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/letransfert.htm}{transferts}, transformations), mais n’ayant pas encore abouti à la réalisation complète de l’article $A$.\\(norme AFNOR NF X50-310).\\
-C’est l’ensemble des articles en atelier, sur les \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/machines.htm}{machines}, ou en attente aux côtés de celles-ci, en cours de transfert, etc.
+	A un moment donné et pour un \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/garticle.htm}{article} A donné, L'en-cours est l'ensemble des matières constituantes de cet article A ne faisant plus partie du \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/Le_stock/lestock.htm}{stock} du fait des \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/actions.htm} actions déjà exécutées à cet instant (sorties de stocks, \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/letransfert.htm}{transferts}, transformations), mais n'ayant pas encore abouti à la réalisation complète de l'article A.\\(norme AFNOR NF X50-310).\\
+C'est l'ensemble des articles en atelier, sur les \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/machines.htm}{machines}, ou en attente aux côtés de celles-ci, en cours de transfert, etc.
 	}{}	
 				
-\def{Entreprise étendue}
+\definition{Entreprise étendue}
 {
-	Intègre tous ses partenaires de la chaîne logistique depuis les fournisseurs de ses fournisseurs jusqu’aux \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/lesclients.htm}{clients} de ses \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/lesclients.htm}{clients}. Intègre tous les processus, les fournisseurs et les \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/lesclients.htm}{clients}.
+	Intègre tous ses partenaires de la chaîne logistique depuis les fournisseurs de ses fournisseurs jusqu'aux \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/lesclients.htm}{clients} de ses \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/lesclients.htm}{clients}. Intègre tous les processus, les fournisseurs et les \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/lesclients.htm}{clients}.
 	}{}	
 				
-\def{ERP}
+\definition{ERP}
 {
 	Entreprise Requirements Planning
-	}{16/10/2006 : 7-22->26}	
+	}{16/10/2006 : 7-22->26}	
 				
-\def{ETO}
+\definition{ETO}
 {
 	Engineer To Order (conception) ) / Stratégie de pilotage à la commande
-	}{13/11/2006 : 2}	
+	}{13/11/2006 : 2}	
 				
-\def{Fabricant}
+\definition{Fabricant}
 {
 	Fabrique et distribue les produits
 	}{}	
 
-\def{Flexibilité}
+\definition{Flexibilité}
 {
 	Capacité à répondre aux diverses demandes des \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/lesclients.htm}{clients}
-	}{07/11/2006 : 6}
+	}{07/11/2006 : 6}
 
-\def{Flow shop hybride}
+\definition{Flow shop hybride}
 {
 	Un hybride entre le flow-shop et le job-shop
 	}{}
 	
-\def{Flux Poussé}
+\definition{Flux Poussé}
 {
 	Lorsque une étape de la production d'un produit est terminée, le produit est \textit{poussé} vers l'étape suivante. C'est la disponibilité du produit venant de l'amont qui déclenche l'étape suivante de fabrication. Cette méthode de production implique le stockage des produits finis avant leur commercialisation. Par exemple, l'industrie sucrière n'est pas maitresse des périodes de récolte des betteraves, qui, par ailleurs, consomment leur sucre une fois récoltées. Il faut donc les transformer au fur et à mesure de leur disponibilité et stocker le sucre, sans se préoccuper des ventes.
 Analyse sur les besoins.
-	}{13/11/2006 : 3-4}
+	}{13/11/2006 : 3-4}
 	
-\def{Flux Tendu}
+\definition{Flux Tendu}
 {
 	Le travail en flux tendu est équivalent au travail avec le minimum de stocks et d'en-cours. Souvent employée dans le cas de flux tirés, l'expression est similaire à \textit{mise en ligne} et peut tout aussi bien s'appliquer aux flux poussés qu'aux flux tirés.
 	}{}
 	
-\def{Flux Tiré}
+\definition{Flux Tiré}
 {
 	Le déclenchement d'une étape de fabrication d'un produit ne peut se faire que s'il y a une demande par l'étape suivante.\\
 La méthode \href{http://fr.wikipedia.org/wiki/Kanban}{Kanban} : méthode de gestion des réapprovisionnements des épiceries, dont l'application à la production industrielle, notoirement d'origine japonaise, consistant à créer un circuit d'étiquettes (kanbans), les unes accompagnant les conteneurs des produits gérés, les autres s'accumulant sur un tableau jusqu'au déclenchement du réapprovisionnement. Avec la méthode \href{http://fr.wikipedia.org/wiki/Kanban}{Kanban}, c'est l'aval (le client) qui commande l'amont (le fournisseur).
-	}{23/10/2006 : 7\\13/11/2006 : 3-4}
+	}{23/10/2006 : 7\\13/11/2006 : 3-4}
 	
-\def{Fonctions}
+\definition{Fonctions}
 {
-	Services de l’entreprise, métiers
-	}{16/10/2006 : 18}
+	Services de l'entreprise, métiers
+	}{16/10/2006 : 18}
 	
-\def{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_commercial_achats/fonction_commerciale.htm}{Fonction commerciale et achat}}
+\definition{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_commercial_achats/fonction_commerciale.htm}{Fonction commerciale et achat}}
 {
-	La fonction commerciale est chargée des relations avec les \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLesclients.htm}{clients} : réception des commandes, promotion et vente des \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLeproduit.htm}{produits}…
-La fonction achats gère les besoins en \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/garticle.htm}{articles} (matières premières, composants...) définis par la \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLafonctiongestiondeproduction.htm}{gestion de production} dans les demandes d’achats. Elle s’occupe par conséquent de passer les commandes aux \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLesfournisseurs.htm}{fournisseurs}.
+	La fonction commerciale est chargée des relations avec les \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLesclients.htm}{clients} : réception des commandes, promotion et vente des \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLeproduit.htm}{produits}…
+La fonction achats gère les besoins en \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/garticle.htm}{articles} (matières premières, composants...) définis par la \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLafonctiongestiondeproduction.htm}{gestion de production} dans les demandes d'achats. Elle s'occupe par conséquent de passer les commandes aux \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLesfournisseurs.htm}{fournisseurs}.
 	}{}
 	
-\def{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/L_etude_industrialisation/fonction_etude_indus.htm}{Fonction étude industrialisation}}
+\definition{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/L_etude_industrialisation/fonction_etude_indus.htm}{Fonction étude industrialisation}}
 {
-	Elle se consacre à la conception des \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/L_etude_industrialisation/leproduit.htm}{produits} et à la définition de leur processus de fabrication. C’est le lieu de création des produits et des \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/garticle.htm}{articles} de l’entreprise. Elle s’intéresse également à la définition et à l’organisation des moyens de production.\\
-Cette fonction est à l’origine de la création de la \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/L_etude_industrialisation/labasededonn%C3%A9es.htm}{base de données techniques TODO}, et participe en grande partie à son évolution.
+	Elle se consacre à la conception des \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/L_etude_industrialisation/leproduit.htm}{produits} et à la définition de leur processus de fabrication. C'est le lieu de création des produits et des \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/garticle.htm}{articles} de l'entreprise. Elle s'intéresse également à la définition et à l'organisation des moyens de production.\\
+Cette fonction est à l'origine de la création de la base de données techniques, et participe en grande partie à son évolution.
 	}{}
 	
-\def{Fonction gestion de production}
+\definition{Fonction gestion de production}
 {
-	Les principales missions de la gestion de production sont : 
+	Les principales missions de la gestion de production sont : 
 	\begin{itemize}
 		\item Le \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_du_flux_des_produits/pilotageflux.htm}{pilotage des flux de produits}
 		\item Le \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/pilotageressources.htm}{pilotage des ressources et des tâches de production}
 	\end{itemize}
 	
-	Ces deux missions sont souvent séparées. La méthode \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/l%27OPT.htm}{OPT} a la particularité de rassembler les deux pour optimiser l’utilisation du système. Afin de bien piloter le système physique de production, la gestion de production doit répondre aux demandes des autres fonctions de l'\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/lentreprise.htm}{entreprise}.
-Les critères sur lesquels se base la Gestion de la Production pour accomplir ses deux missions sont :
+	Ces deux missions sont souvent séparées. La méthode OPT a la particularité de rassembler les deux pour optimiser l'utilisation du système. Afin de bien piloter le système physique de production, la gestion de production doit répondre aux demandes des autres fonctions de l'\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/lentreprise.htm}{entreprise}.
+Les critères sur lesquels se base la Gestion de la Production pour accomplir ses deux missions sont :
 \begin{itemize}
 \item la réduction des coûts,
 \item le respect des délais,
-\item l’amélioration des performances.
+\item l'amélioration des performances.
 \end{itemize}
-La gestion de production doit donc satisfaire les exigences du client en anticipant ses demandes et en organisant les outils de production. Son travail se résume à :
+La gestion de production doit donc satisfaire les exigences du client en anticipant ses demandes et en organisant les outils de production. Son travail se résume à :
 \begin{itemize}
 \item gérer les données techniques,
 \item tenir et gérer les stocks,
@@ -292,616 +311,618 @@ La gestion de production doit donc satisfaire les exigences du client en anticip
 \item effectuer les lancements,
 \item suivre et calculer les coûts.
 \end{itemize}
-Aujourd’hui, la Gestion de Production est, la plupart du temps, Assistée par Ordinateur : on parle ainsi de GPAO.
+Aujourd'hui, la Gestion de Production est, la plupart du temps, Assistée par Ordinateur : on parle ainsi de GPAO.
 	}{}
 	
-\def{Gamme}
+\definition{Gamme}
 {
-	Description d’un processus de fabrication permettant d’élaborer le composé à partir de ses composants de niveau immédiatement inférieur.
-	}{13/11/2006 : 11-12}
+	Description d'un processus de fabrication permettant d'élaborer le composé à partir de ses composants de niveau immédiatement inférieur.
+	}{13/11/2006 : 11-12}
 	
-\def{Gamme d’ordonnancement}
+\definition{Gamme d'ordonnancement}
 {
-	La gamme d’ordonnancement constitue le document essentiel de fabrication, détaillant l'analyse du mode opératoire d'élaboration d'un \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/garticle.htm}{article}.
+	La galle d'ordonnancement constitue le document essentiel de fabrication, détaillant l'analyse du mode opératoire d'élaboration d'un \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/garticle.htm}{article}.
 C'est donc une suite d'opérations, chaque opération nécessitant du temps et un poste de charge.\\
 Il existe un lien entre la gamme d'ordonnancement et la \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/L_etude_industrialisation/nomenclature.htm}{nomenclature}. Dans certaines \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/lentreprise.htm}{entreprises}, la nomenclature est contenue dans la gamme.
 	}{}
 		
-\def{GANTT}
+\definition{GANTT}
 {
 	Diagramme de GANTT Global
-	}{06/11/2006 : 11}
+	}{06/11/2006 : 11}
 		
-\def{Gestion scientifique des stocks}
+\definition{Gestion scientifique des stocks}
 {
 	Analyse sur la consommation et non sur les besoins.\\
 	Selon les demandes passées, on déduit les réapprovisionnements de stocks pour le futur.
-	}{23/10/2006 : 3}
+	}{23/10/2006 : 3}
 		
-\def{Gestion sur stock}
+\definition{Gestion sur stock}
 {
-	$= gestion sur consommation$
-	Pour les produits peu chers ou ceux qu’on peut acheter en gros.
+	= gestion sur consommation
+	Pour les produits peu chers ou ceux qu'on peut acheter en gros.
 	}{}
 		
-\def{Goulet}
+\definition{Goulet}
 {
 	Ressource critique qui ralentit toute la production
-	}{08/11/2006 : 12}
+	}{08/11/2006 : 12}
 		
-\def{GPAO}
+\definition{GPAO}
 {
 	Gestion de production assistée par ordinateur.
 	Un logiciel de GPAO est un programme modulaire de gestion de production permettant de gérer l'ensemble des activités de l'industrie :
 	\begin{itemize}
-	\item Gestion des stocks et des achats
-	\item Gestion de commandes
-	\item Gestion des produits engendrés par ces commandes
-	\item Gestion des articles entrant dans la fabrication de ces produits et de leurs nomenclatures
-	\item Expédition des produits
-	\item Facturation
-	\end{itemize}
-	}{13/11/2006 : 8}
+		\item Gestion des stocks et des achats
+		\item Gestion de commandes
+		\item Gestion des produits engendrés par ces commandes
+		\item Gestion des articles entrant dans la fabrication de ces produits et de leurs nomenclatures
+		\item Expédition des produits
+		\item Facturation
+	\end{itemize}~
+	}{13/11/2006 : 8}
 		
-\def{Heure standard}
+\definition{Heure standard}
 {
 	\begin{itemize}
 	\item Heure standard machine : heure qui comporte tous les coûts pour utiliser une heure une machine.
 	\item Heure standard main-d'oeuvre : idem mais pour un homme.
-	\end{itemize}
+	\end{itemize}~
 	}{}
 		
-\def{Inducteur}
+\definition{Inducteur}
 {
-	Permettent d’agir sur le système pour engendrer de la performance. Le résultat de cette action se voit grâce aux indicateurs.
+	Permettent d'agir sur le système pour engendrer de la performance. Le résultat de cette action se voit grâce aux indicateurs.
 	}{}
 		
-\def{Jalonnement}
+\definition{Jalonnement}
 {
 	Planification à capacité infinie.
-	Le jalonnement est une organisation des différentes opérations de production en fonction des disponibilités et la création d’un calendrier de la production. Un jalonnement est effectué pour toute modification dans la logique de la production.
-	Deux types de jalonnement sont possibles :
+	Le jalonnement est une organisation des différentes opérations de production en fonction des disponibilités et la création d'un calendrier de la production. Un jalonnement est effectué pour toute modification dans la logique de la production.
+	Deux types de jalonnement sont possibles :
 	\begin{itemize}
-	\item Jalonnement au plus tôt : démarre à la date initiale et dispose les charges.
-	\item Jalonnement au plus tard : part de la date de livraison et essaie de répartir les charges par priorité de fin.
+	\item Jalonnement au plus tôt : démarre à la date initiale et dispose les charges.
+	\item Jalonnement au plus tard : part de la date de livraison et essaie de répartir les charges par priorité de fin.
 	\end{itemize}
-	Le jalonnement est effectué par la direction de la production , travail à court terme.\\
-	Le jalonnement des \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/glesoper.htm}{opérations} est l’aboutissement d’une action d’\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/ordonnac.htm}{ordonnancement} constitué par un ensemble de repères dans le temps.\\(norme AFNOR NF X 50-310).\\
-	Ce repère s’appelle jalon.\\
-	Le jalonnement du travail consiste à traduire tout \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/lesordres.htm}{ordre de fabrication} en une suite d’opérations jalonnées. Pour ce faire, il faut exploiter la gamme de fabrication du produit. La plupart du temps, ces gammes de travail offrent pour seules possibilités le \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/fraction.htm}{fractionnement} ou le \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/le_chevauchement.htm}{chevauchement}.\\
-On parle de jalonnement \textit{au plus tôt} s’il est réalisé dans une optique d’utilisation maximale des  \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLesressources.htm}{ressources}. On parle de jalonnement \textit{au plus tard} si c’est dans un souci de minimisation des \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLestock.htm}{stocks}.
-Le jalonnement est effectué dans la plupart des cas à \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/capacit%C3%A9limit%C3%A9e.htm}{capacité illimitée TODO}.
-	}{8/11/2006 : 11}
+	Le jalonnement est effectué par la direction de la production, travail à court terme.\\
+	Le jalonnement des \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/glesoper.htm}{opérations} est l'aboutissement d'une action d'\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/ordonnac.htm}{ordonnancement} constitué par un ensemble de repères dans le temps.\\(norme AFNOR NF X 50-310).\\
+	Ce repère s'appelle jalon.\\
+	Le jalonnement du travail consiste à traduire tout \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/lesordres.htm}{ordre de fabrication} en une suite d'opérations jalonnées. Pour ce faire, il faut exploiter la gamme de fabrication du produit. La plupart du temps, ces gammes de travail offrent pour seules possibilités le \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/fraction.htm}{fractionnement} ou le \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/le_chevauchement.htm}{chevauchement}.\\
+On parle de jalonnement \textit{au plus tôt} s'il est réalisé dans une optique d'utilisation maximale des  \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLesressources.htm}{ressources}. On parle de jalonnement \textit{au plus tard} si c'est dans un souci de minimisation des \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLestock.htm}{stocks}.
+Le jalonnement est effectué dans la plupart des cas à capacité illimitée.
+	}{8/11/2006 : 11}
 		
-\def{Juste à temps (JAT)}
+\definition{Juste à temps (JAT)}
 {
 	Système de gestion de production en flux tirés (type Kanban).\\
-	Le principe du Juste à Temps est intéressant, dans un objectif de minimisation des coûts. Il y a plusieurs manières de l’aborder.
-	Au sens large : Eliminer systématiquement ce qui n’apporte pas une valeur au \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/L_etude_industrialisation/leproduit.htm}{produit} que le \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLESCLIENTS.htm}{client} final est prêt à reconnaître (cas des \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLeSACTIONS.htm}{actions} de \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLetransfert.htm}{transfert}, ou du \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLestock.htm}{stockage}.).
-	Au sens restreint : Obtenir les quantités de matières, composants ou produits, strictement nécessaires, au moment opportun, et directement sur leur lieu d’utilisation. Le JAT implique alors une synchronisation rigoureuse entre les opérations successives d’approvisionnements, de fabrication ou de distribution.
-	Le JAT ne fait que traduire les souhaits des clients. On cherche à respecter les cinq zéros :
+	Le principe du Juste à Temps est intéressant, dans un objectif de minimisation des coûts. Il y a plusieurs manières de l'aborder.
+	Au sens large : Eliminer systématiquement ce qui n'apporte pas une valeur au \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/L_etude_industrialisation/leproduit.htm}{produit} que le \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLESCLIENTS.htm}{client} final est prêt à reconnaître (cas des \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLeSACTIONS.htm}{actions} de \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLetransfert.htm}{transfert}, ou du \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLestock.htm}{stockage}.).
+	Au sens restreint : Obtenir les quantités de matières, composants ou produits, strictement nécessaires, au moment opportun, et directement sur leur lieu d'utilisation. Le JAT implique alors une synchronisation rigoureuse entre les opérations successives d'approvisionnements, de fabrication ou de distribution.
+	Le JAT ne fait que traduire les souhaits des clients. On cherche à respecter les cinq zéros :
 	\begin{itemize}
 	\item ne fabriquer que le strict besoin, avec la \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLaqualite.htm}{qualité} désirée pour les produits (0 défauts),
 	\item faire circuler les informations et les produits rapidement (0 délais) et donc (0 pannes),
 	\item changer rapidement de fabrication (0 temps de changement de série).
-	\end{itemzie}
+	\end{itemize}
 	Ces contraintes entraînent le 0 stock, supprimant les \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/glescouts.htm}{coûts de stockage}.\\
-	Les clients obtiennent ainsi des produits de moindre coût et de qualité dans un délai court. Sinon, tout produit défectueux entraînerait le renvoi par le client de l’ensemble du lot.
-	Le JAT est à l’origine d’un changement de mentalité : les délais étant réduits, il apparaît un besoin de \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/glareactivite.htm}{réactivité} supérieur. Les \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/lentreprise.htm}{entreprises} doivent donc \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLadecentralisation.htm}{décentraliser} les décisions, coopérer et de se coordonner entre elles.
+	Les clients obtiennent ainsi des produits de moindre coût et de qualité dans un délai court. Sinon, tout produit défectueux entraînerait le renvoi par le client de l'ensemble du lot.
+	Le JAT est à l'origine d'un changement de mentalité : les délais étant réduits, il apparaît un besoin de \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/glareactivite.htm}{réactivité} supérieur. Les \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/lentreprise.htm}{entreprises} doivent donc \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLadecentralisation.htm}{décentraliser} les décisions, coopérer et de se coordonner entre elles.
 	Le JAT est une approche purement théorique. En effet, les cinq zéros sont impossibles à obtenir dans la réalité.
-	Conséquence : l’amélioration de la qualité
-	}{13/11/2006 : 4}
+	Conséquence : l'amélioration de la qualité
+	}{13/11/2006 : 4}
 		
-\def{Kanban}
+\definition{Kanban}
 {
-	Méthode Kanban : flux tiré.
+	Méthode Kanban : flux tiré.
 	Autorégulation de la production en fonction des quantités consommées.
-	Sur le ticket Kanban d’un article, on a la référence de l’article mais pas la nomenclature.
-	Sur un planning Kanban, un ticket Kanban doit absolument être prélevé si le nombre de tickets dépasse le niveau d’alerte.
-	Le nombre de containers vides se voit sur un planning Kanban par le nombre d’étiquettes et non par le nombre d’encoches libres.
+	Sur le ticket Kanban d'un article, on a la référence de l'article mais pas la nomenclature.
+	Sur un planning Kanban, un ticket Kanban doit absolument être prélevé si le nombre de tickets dépasse le niveau d'alerte.
+	Le nombre de containers vides se voit sur un planning Kanban par le nombre d'étiquettes et non par le nombre d'encoches libres.
 	Fonctionne bien pour des petites séries et du personnel polyvalent.
-	}{23/10/2006 : 7->9}
+	}{23/10/2006 : 7->9}
 		
-\def{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/le_lancement.htm}{Lancement}}
+\definition{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/le_lancement.htm}{Lancement}}
 {
-	Le lancement est l’ensemble des \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLesactions.htm}{actions} consistant à diffuser aux services de réalisation les données relatives aux \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/lesordres.htm}{ordres} à exécuter (fabrication, approvisionnement d’\href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLesactions.htm}{actions} achetés, sous-traitance) ainsi que les supports et documents associés éventuels :
+	Le lancement est l'ensemble des \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLesactions.htm}{actions} consistant à diffuser aux services de réalisation les données relatives aux \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/lesordres.htm}{ordres} à exécuter (fabrication, approvisionnement d'\href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLesactions.htm}{actions} achetés, sous-traitance) ainsi que les supports et documents associés éventuels :
 au moment fixé par le programme,
 après avoir effectué une vérification de disponibilité des éléments nécessaires (spécifications, composants, moyens).
-L’ordre est alors exécutoire.\\
+L'ordre est alors exécutoire.\\
 (norme AFNOR NF X 50-310).
 	}{}
 			
-\def{Lancements suggérés}
+\definition{Lancements suggérés}
 {
-	Ce sont les quantités qui correspondent aux ordres d’achat ou de fabrication suggérés à la date suggérée de commande ou de lancement
+	Ce sont les quantités qui correspondent aux ordres d'achat ou de fabrication suggérés à la date suggérée de commande ou de lancement
 	}{}
 		
-\def{Logique de pilotage}
+\definition{Logique de pilotage}
 {
 	Mode hiérarchisé avec prise de décision centralisée (flux poussé)
 	Mode latéral avec prise de décision répartie (flux tiré)
 	Mode combiné ou mixte (différenciation retardée)
 	}{}
 			
-\def{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/leslots.htm}{Lot}}
+\definition{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/leslots.htm}{Lot}}
 {
-	Pour un moyen de production ou un ensemble de moyens de production déterminé, c’est la quantité de pièces concernées par une même \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLesactions.htm}{actions} ou ensemble d’actions (\href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/glesoper.htm}{opérations} ou \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/letransfert.htm}{transferts}) entre deux événements intervenant pour ce moyen de production.\\(norme AFNOR NF X 50-310).\\
-	Dans une \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/lentreprise.htm}{entreprise}, on distingue lot de transfert et lot de fabrication (pour réaliser une opération). Le lot de transfert détermine la taille des lots de pièces circulant entre les postes. La minimisation de ces lots favorise l’accélération des flux de produits et la réduction des \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/lencours.htm}{en-cours}. Le lot de fabrication doit être de préférence supérieur à la \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/laquanti%20%C3%A9co.htm}{quantité économiqueTODO} de fabrication.
+	Pour un moyen de production ou un ensemble de moyens de production déterminé, c'est la quantité de pièces concernées par une même \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLesactions.htm}{actions} ou ensemble d'actions (\href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/glesoper.htm}{opérations} ou \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/letransfert.htm}{transferts}) entre deux événements intervenant pour ce moyen de production.\\(norme AFNOR NF X 50-310).\\
+	Dans une \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/lentreprise.htm}{entreprise}, on distingue lot de transfert et lot de fabrication (pour réaliser une opération). Le lot de transfert détermine la taille des lots de pièces circulant entre les postes. La minimisation de ces lots favorise l'accélération des flux de produits et la réduction des \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/lencours.htm}{en-cours}. Le lot de fabrication doit être de préférence supérieur à la quantité économique de fabrication.
 	}{}
 		
-\def{Lot de fabrication}
+\definition{Lot de fabrication}
 {
 	Quantité d'un même article qui restera groupé pour toutes les opérations de production. Représente physiquement un ordre de fabrication.
 	}{}
 			
-\def{Lot standard}
+\definition{Lot standard}
 {
 	Quantité standard de fabrication qui sert au calcul des coûts des gammes en répartissant les coûts de lancement sur les articles du lot standard.
 	}{}
 		
-\def{Lot de transfert}
+\definition{Lot de transfert}
 {
 	Lorsqu'il est possible d'organiser un chevauchement des opérations de production, le lot de transfert est la fraction minimum du lot de fabrication qui peut être transmise d'un poste à l'autre.
 	}{}
 
-\def{Macro Gamme}
+\definition{Macro Gamme}
 {
-	Ensemble de phases sur des ressources critique.\\ 	On indique le nombre d’heures passées sur une ressource critique pour une famille de produits. Ceci implique la définition des profils de charge.	
+	Ensemble de phases sur des ressources critique.\\
+	On indique le nombre d'heures passées sur une ressource critique pour une famille de produits. Ceci implique la définition des profils de charge.	
 	}{}
 
-\def{Marge}
+\definition{Marge}
 {
-	La marge représente la différence entre la date de fabrication au plus tôt et celle au plus tard. C’est la période pendant laquelle on peut lancer le produit sans risquer de retard sur le reste de la production. Si la marge est négative, il y a un problème de lancement de fabrication au niveau des dates.
+	La marge représente la différence entre la date de fabrication au plus tôt et celle au plus tard. C'est la période pendant laquelle on peut lancer le produit sans risquer de retard sur le reste de la production. Si la marge est négative, il y a un problème de lancement de fabrication au niveau des dates.
 	}{}
 	
-\def{MES}
+\definition{MES}
 {
 	Manufacturing executive system
 	système informatique dont les objectifs sont d'abord de collecter en temps réel les données de production de tout ou partie d'une usine. Ces données collectées permettent ensuite de réaliser un certain nombre d'activités d'analyse.
-	}{13/11/2006 : 7}
+	}{13/11/2006 : 7}
 	
-\def{MOCN}
+\definition{MOCN}
 {
 	Programmes pour machines outils à commande numérique
-	}{13/11/2006 : 7}
+	}{13/11/2006 : 7}
 	
-\def{MOD}
+\definition{MOD}
 {
-	Le temps de main d’œuvre nécessaire (MOD) pour la production est défini par le nombre de pièces par Unité de Temps multiplié par le nombre d’Unités de Temps qu’on travaille effectivement. Le temps de main d’oeuvre peut être différent du temps machine (si un opérateur travaille sur plusieurs machines ou alors plusieurs opérateurs sur une même machine).
+	Le temps de main d'œuvre nécessaire (MOD) pour la production est défini par le nombre de pièces par Unité de Temps multiplié par le nombre d'Unités de Temps qu'on travaille effectivement. Le temps de main d'oeuvre peut être différent du temps machine (si un opérateur travaille sur plusieurs machines ou alors plusieurs opérateurs sur une même machine).
 	}{}
 	
-\def{MPS}
+\definition{MPS}
 {
 	Master Production Scheduling
-	C’est le calcul de charge globale du PIC
-	}{8/11/2006 : 11}
+	C'est le calcul de charge globale du PIC
+	}{8/11/2006 : 11}
 	
-\def{MRP}
+\definition{MRP}
 {
 	Management Ressource Planning (flux poussés).
 	Calcul des approvisionnements en fonction des demandes en produits finis.
 	Calcul des besoins nets.
-	}{06/11/2006 : 2\\8/11/2006 : 3}
+	}{06/11/2006 : 2\\8/11/2006 : 3}
 	
-\def{MRP 0}
+\definition{MRP 0}
 {
 	Calcul des besoins en composants.
 	A court terme (3 à 6 mois avec révision hebdomadaire).
-	}{06/11/2006 : 2->9\\8/11/2006 : 8}
+	}{06/11/2006 : 2->9\\8/11/2006 : 8}
 	
-\def{MRP 1}
+\definition{MRP 1}
 {
 	Méthode de régulation de la production
-	}{06/11/2006 : 9->12\\8/11/2006 : 8}
+	}{06/11/2006 : 9->12\\8/11/2006 : 8}
 	
-\def{MRP 2}
+\definition{MRP 2}
 {
 	Méthode des ressources de production.
 	Manufacturing Ressource Planning.
-	}{06/11/2006 : 2\\8/11/2006 : 7}
+	}{06/11/2006 : 2\\8/11/2006 : 7}
 	
-\def{MRP 3}
+\definition{MRP 3}
 {
-	
-	}{06/11/2006 : 2}
+	~
+	}{06/11/2006 : 2}
 		
-\def{MTO}
+\definition{MTO}
 {
 	Make To Order (production) / Stratégie de pilotage à la commande.
-	}{13/11/2006 : 2}
+	}{13/11/2006 : 2}
 		
-\def{MTS}
+\definition{MTS}
 {
 	Make To Stock / Stratégie de pilotage sur stock
-	}{13/11/2006 : 2}
+	}{13/11/2006 : 2}
 		
-\def{NAF}
+\definition{NAF}
 {
-	Nomenclature d’Activités Française
-	}{16/10/2006 : 12}
+	Nomenclature d'Activités Française
+	}{16/10/2006 : 12}
 		
-\def{NES}
+\definition{NES}
 {
-	Nomenclature d’Activités de Synthèse d’activités économiques et de produits
-	}{16/10/2006 : 12}
+	Nomenclature d'Activités de Synthèse d'activités économiques et de produits
+	}{16/10/2006 : 12}
 		
-\def{Nomenclature}
+\definition{Nomenclature}
 {
-	Nomenclature désigne une instance de classification (tableau, liste, règles d'attribution d'identité...) faisant autorité et servant de référence à une discipline donnée.\\
+	Nomenclature désigne une instance de classification (tableau, liste, règles d'attribution d'identité...) faisant autorité et servant de référence à une discipline donnée.\\
 	Elle montre les relations entre un composant et ses composés.
-	}{13/11/2006 :8-9}
+	}{13/11/2006 :8-9}
 		
-\def{Nomenclature Bureau des méthodes}
+\definition{Nomenclature Bureau des méthodes}
 {
 	Structure arborescente sur les articles descriptibles graphiquement.
-	}{13/11/2006 : 8}
+	}{13/11/2006 : 8}
 	
-\def{Nomenclature Bureau d’études}
+\definition{Nomenclature Bureau d'études}
 {
 	Liste sur un seul niveau de dossiers sur les articles descriptifs.
-	}{13/11/2006 : 8}
+	}{13/11/2006 : 8}
 
-\def{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/lesordres.htm}{Ordre}}
+\definition{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/lesordres.htm}{Ordre}}
 {
-	Un ordre de fabrication ou d’achat est l’expression de la décision de faire exécuter pour une date déterminée une \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLeSACTIONS.htm}{action} d’approvisionnement (achat ou fabrication). Cette décision résulte d’un besoin à satisfaire, et prend en compte des éléments de gestion ; les ordres s’expriment par une quantité donnée d’un \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/garticle.htm}{article} défini ; l’exécution d’un ordre est généralement matérialisée par une entrée en \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLestock.htm}{stock}.\\(norme AFNOR NF X 50-310).
+	Un ordre de fabrication ou d'achat est l'expression de la décision de faire exécuter pour une date déterminée une \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLeSACTIONS.htm}{action} d'approvisionnement (achat ou fabrication). Cette décision résulte d'un besoin à satisfaire, et prend en compte des éléments de gestion ; les ordres s'expriment par une quantité donnée d'un \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/garticle.htm}{article} défini ; l'exécution d'un ordre est généralement matérialisée par une entrée en \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLestock.htm}{stock}.\\(norme AFNOR NF X 50-310).
 	}{}
 	
-\def{OF}
+\definition{OF}
 {
 	Ordre de fabrication
 	}{}
 	
-\def{OF clos}
+\definition{OF clos}
 {
 	Ordre dont on a terminé la fabrication, le produit fabriqué est entré en stock, toutes les déclarations de production ont été passées.
 	}{}
 	
-\def{OF ferme}
+\definition{OF ferme}
 {
-	Ordre de fabrication confirmé qui n’est pas supprimé automatiquement par le calcul des besoins et qui doit être lancé en fabrication.
+	Ordre de fabrication confirmé qui n'est pas supprimé automatiquement par le calcul des besoins et qui doit être lancé en fabrication.
 	}{}
 	
-\def{OF lancé}
+\definition{OF lancé}
 {
-	Ordre dont on démarre la fabrication. Ses composants sont réservés dans le stock ; on pourra effectuer des sorties de stock et faire des déclarations de production sur cet ordre.
+	Ordre dont on démarre la fabrication. Ses composants sont réservés dans le stock ; on pourra effectuer des sorties de stock et faire des déclarations de production sur cet ordre.
 	}{}
 	
-\def{OF suggéré}
+\definition{OF suggéré}
 {
-	Peuvent être transformés individuellement ou automatiquement jusqu’à une date limite de transformation, en ordres de fabrication fermes par la fonction Affermissement des OF.
+	Peuvent être transformés individuellement ou automatiquement jusqu'à une date limite de transformation, en ordres de fabrication fermes par la fonction Affermissement des OF.
 	}{}
 	
-\def{OPT}
+\definition{OPT}
 {
 	Optimized Production Technique.
 	Planification des ordres de fabrication en priorité sur les outils de production à capacité limité.
-	}{8/11/2006 : 11}
+	}{8/11/2006 : 11}
 	
-\def{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/ordonnac.htm}{Ordonnancer}}
+\definition{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/ordonnac.htm}{Ordonnancer}}
 {
-	L’ordonnancement est, en production, l’ensemble des \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLeSACTIONS.htm}{actions} qui permettent de répondre à la demande (spécification, quantités, dates) exprimée en amont, visant à utiliser au mieux les \href{http://gpr.insa-lyon.fr//supgedem/Home/glossaire/gLesressources.htm}{ressources} dans le respect de la politique industrielle définie.\\
+	L'ordonnancement est, en production, l'ensemble des \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLeSACTIONS.htm}{actions} qui permettent de répondre à la demande (spécification, quantités, dates) exprimée en amont, visant à utiliser au mieux les \href{http://gpr.insa-lyon.fr//supgedem/Home/glossaire/gLesressources.htm}{ressources} dans le respect de la politique industrielle définie.\\
 	(norme AFNOR NF X 50-310).\\
-Nous appellerons donc ordonnancement au sens restreint ou ordonnancement détaillé, le fait d’effectuer une affectation et un séquencement détaillé des \href{http://gpr.insa-lyon.fr//supgedem/Home/glossaire/glestach.htm}{tâches} sur les ressources. Grâce à l’ordonnancement, on optimise l’utilisation des \href{http://gpr.insa-lyon.fr//supgedem/Home/glossaire/gLesmachines.htm}{machines}, on respecte les délais... Les algorithmes d’ordonnancement utilisés sont : la règle de Johnson, les règles SPT (Shortest processing time), MST (Minimum Slack Time), etc. suivant le type de gestion choisi \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_du_flux_des_produits/leslogi.htm}{sur besoin ou sur consommation})
+Nous appellerons donc ordonnancement au sens restreint ou ordonnancement détaillé, le fait d'effectuer une affectation et un séquencement détaillé des \href{http://gpr.insa-lyon.fr//supgedem/Home/glossaire/glestach.htm}{tâches} sur les ressources. Grâce à l'ordonnancement, on optimise l'utilisation des \href{http://gpr.insa-lyon.fr//supgedem/Home/glossaire/gLesmachines.htm}{machines}, on respecte les délais... Les algorithmes d'ordonnancement utilisés sont : la règle de Johnson, les règles SPT (Shortest processing time), MST (Minimum Slack Time), etc. suivant le type de gestion choisi \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_du_flux_des_produits/leslogi.htm}{sur besoin ou sur consommation})
 	}{}
 	
-\def{Ordres suggérés}
+\definition{Ordres suggérés}
 {
-	Ce sont les ordres d’achat ou de fabrication suggérés par le dernier calcul des besoins.
+	Ce sont les ordres d'achat ou de fabrication suggérés par le dernier calcul des besoins.
 	}{}
 	
-\def{PDP}
+\definition{PDP}
 {
 	Plan Directeur de Production (plus détaillé que le PIC).
 	Plan à moyen terme (6 mois avec révision mensuelle).
 	Produits finis / Prévisions de ventes / Commandes clients / Stock prévisionnel.
 	Les quantités mentionnées sont exprimées par références de produits.
 	Il sert à déterminer les besoins indépendants.
-	Il constitue l’entrée du calcul des besoins nets.
+	Il constitue l'entrée du calcul des besoins nets.
 	PDP à double niveau en différenciation retardée.
-	}{8/11/2006 : 3->7}	
+	}{8/11/2006 : 3->7}	
 
-\def{PDP TODO (PDDP?)}
+\definition{PDP TODO (PDDP?)}
 {
 	Le Plan Directeur Détaillé de Production.
 	Horizon de planification hebdomadaire.
 	}{}
 
-\def{PERT}
+\definition{PERT}
 {
-	Gestion de projet : Project Evaluation and Review Technique.
+	Gestion de projet : Project Evaluation and Review Technique.
 	Le graphe PERT permet de visualiser la dépendance des tâches et de procéder à leur ordonnancement. On utilise un graphe de dépendances. Pour chaque tâche, on indique une date de début et de fin au plus tôt et au plus tard. Le diagramme permet de déterminer le chemin critique qui conditionne la durée minimale du projet.
-	}{13/11/2006 : 4}
+	}{13/11/2006 : 4}
 
 
-\def{PIC}
+\definition{PIC}
 {
 	Plan Industriel et Commercial.\\
 	Il présente une vision à long terme sur 1 à 3 ans avec révision mensuelle.\\
 	Le raisonnement porte non pas sur les produits finis mais sur des familles de produits.\\
-	}{8/11/2006 : 3-4}
+	}{8/11/2006 : 3-4}
 
 
-\def{Plan de production}
+\definition{Plan de production}
 {
 	engagement de production à moyen terme qui établit dans les grandes lignes les quantités à produire.
 	}{}
 
 
-\def{Poste de charge}
+\definition{Poste de charge}
 {
-	Le poste de charge est une unité opérationnelle de base que l’\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/lentreprise.htm}{entreprise} a décidé de gérer.\\
+	Le poste de charge est une unité opérationnelle de base que l'\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/lentreprise.htm}{entreprise} a décidé de gérer.\\
 	(norme ISO 8402).\\
-	C’est un ensemble de machines ou de postes de production ayant les mêmes capabilités et les mêmes performances, donc \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/linterchangeabilit%C3%A9.htm}{interchangeables}. Il faut que ces postes appartiennent à la même entité géographique et à la même entité de gestion.
+	C'est un ensemble de machines ou de postes de production ayant les mêmes capabilités et les mêmes performances, donc interchangeables. Il faut que ces postes appartiennent à la même entité géographique et à la même entité de gestion.
 	}{}
 
 
-\def{Poste de travail}
+\definition{Poste de travail}
 {
-	Le poste de travail est un emplacement défini sur lequel un ou plusieurs ouvriers exécutent un travail, avec ou sans  HYPERLINK "http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/machines.htm" MACHINE.\\
+	Le poste de travail est un emplacement défini sur lequel un ou plusieurs ouvriers exécutent un travail, avec ou sans \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/machines.htm}{machines}.\\
 	(norme AFNOR NF X50-310 ).
 	Les postes peuvent être :
 	\begin{itemize}
-	\item Manuels. L'homme y tient une place prépondérante. On y trouve une grande \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/flexibilt%C3%A9.htm}{flexibilité}. 
+	\item Manuels. L'homme y tient une place prépondérante. On y trouve une grande flexibilité. 
 	\item Homme-machine. L'homme alimente alors la machine et effectue les réglages initiaux et intermédiaires. 
 	\item Machines automatiques. La machine travaille seule sous la surveillance d'un technicien.
-	\end{itemize}
+	\end{itemize}~
 	}{}
 
-\def{Prévisions commerciales}
+\definition{Prévisions commerciales}
 {
-	\'{E}valuation de la demande à long ou moyen terme, en vue notamment d’établir un plan directeur de production. On fait les prévisions commerciales sur des articles fictifs qui représentent la famille d’articles vendues.
+	\'{E}valuation de la demande à long ou moyen terme, en vue notamment d'établir un plan directeur de production. On fait les prévisions commerciales sur des articles fictifs qui représentent la famille d'articles vendues.
 	}{}
 
-\def{Processus}
+\definition{Processus}
 {
 	Interaction entre les services, dynamique;
 	Chaîne de traitements transversale aux fonctions.
-	}{16/10/2006 : 17}
+	}{16/10/2006 : 17}
 
 
-\def{Processus d’approvisionnement et de stockage}
+\definition{Processus d'approvisionnement et de stockage}
 {
-	
-	}{23/10/2006 : 1}
+	~
+	}{23/10/2006 : 1}
 
-\def{Processus distribution}
+\definition{Processus distribution}
 {
-	
+	~
 	}{}
 
-\def{Processus production}
+\definition{Processus production}
 {
-	
+	~
 	}{}
 
-\def{Processus relation fournisseur}
+\definition{Processus relation fournisseur}
 {
-	
+	~
 	}{}
 
 
-\def{Production en ligne}
+\definition{Production en ligne}
 {
 	Production en ligne, continue, flow shop
-	}{07/11/2006 : 7}
+	}{07/11/2006 : 7}
 
-\def{Production discontinue}
+\definition{Production discontinue}
 {
 	Production discontinue, par lots, en section homogène, job shop
-	}{07/11/2006 : 7}
+	}{07/11/2006 : 7}
 
-\def{Production par îlots}
+\definition{Production par îlots}
 {
 	Production par îlots, organisation mixte
-	}{07/11/2006 : 8}
+	}{07/11/2006 : 8}
 
-\def{Production suggeree}
+\definition{Production suggeree}
 {
-	Si la variation de stock est négative, c’est le complément nécessaire pour arriver à zéro.
+	Si la variation de stock est négative, c'est le complément nécessaire pour arriver à zéro.
 	}{}
 
-\def{Réactivité}
+\definition{Réactivité}
 {
 	Vitesse de satisfaction aux demandes non anticipées.
-	}{07/11/2006 : 6}
+	}{07/11/2006 : 6}
 
-\def{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/ressources.htm}{Ressource}}
+\definition{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/ressources.htm}{Ressource}}
 {
-	On appelle ressource tout type de moyen matériel, humain et financier d’une \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/lentreprise.htm}{entreprise} utilisé pour réaliser une \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/glestach.htm}{tâche}.\\
-Pour un problème d'\href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLordonnancement.htm}{ordonnancement}, ces ressources se répartissent en deux types :
+	On appelle ressource tout type de moyen matériel, humain et financier d'une \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/lentreprise.htm}{entreprise} utilisé pour réaliser une \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/glestach.htm}{tâche}.\\
+Pour un problème d'\href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLordonnancement.htm}{ordonnancement}, ces ressources se répartissent en deux types :
 \begin{itemize}
-\item Ressources utilisées
-\begin{itemize}
-Une ressource est dite utilisée si elle est réservée pendant un temps précis pour une tâche, puis remise à la disposition des autres tâches : elle n’est pas consommable mais renouvelable.
-\item Le \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/lepostedecharge.htm}{poste de charge},
-\item Les hommes (opérateurs, décideurs, gestionnaires,...)
-\item Les surfaces de \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/Le_stock/lestock.htm}{stockage}
-\item Le \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/letransfert.htm}{système de transfert}
-\item Les applications (système CAO , système MRP , logiciels,...)
-\item Des \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/outillage.htm}{outillages} partagés.
-\item Etc.
-\end{itemize}
-\item Ressources consommables
-\begin{itemize}
-Les ressources consommables sont aussi appelées cumulatives. Une tâche prend un volume donné de certaines ressources, et ce, de façon irréversible.
-\item L’argent .
-\item Les composants.
-\item Certains \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/outillage.htm}{outils}.
-\item Etc.
-\end{itemize}
+	\item Ressources utilisées
+		Une ressource est dite utilisée si elle est réservée pendant un temps précis pour une tâche, puis remise à la disposition des autres tâches : elle n'est pas consommable mais renouvelable.
+		\begin{itemize}
+		\item Le \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/lepostedecharge.htm}{poste de charge},
+		\item Les hommes (opérateurs, décideurs, gestionnaires,...)
+		\item Les surfaces de \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/Le_stock/lestock.htm}{stockage}
+		\item Le \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/letransfert.htm}{système de transfert}
+		\item Les applications (système CAO, système MRP, logiciels,...)
+		\item Des \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/outillage.htm}{outillages} partagés.
+		\item Etc.
+	\end{itemize}
+	\item Ressources consommables
+		Les ressources consommables sont aussi appelées cumulatives. Une tâche prend un volume donné de certaines ressources, et ce, de façon irréversible.
+		\begin{itemize}
+		\item L'argent .
+		\item Les composants.
+		\item Certains \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/outillage.htm}{outils}.
+		\item Etc.
+	\end{itemize}
+\end{itemize}~
 	}{}
 	
-\def{RMTO}
+\definition{RMTO}
 {
 	Repetitive Maker To Order ) / Stratégie de pilotage à la commande
-	}{13/11/2006 : 2}
+	}{13/11/2006 : 2}
 
-\def{SAP/CO}
+\definition{SAP/CO}
 {
 	Contrôle de gestion
-	}{16/10/2006 : 21}
+	}{16/10/2006 : 21}
 
-\def{SAP/FI}
+\definition{SAP/FI}
 {
 	Comptabilité financière
-	}{16/10/2006 : 20}
+	}{16/10/2006 : 20}
 
-\def{SAP/MM}
+\definition{SAP/MM}
 {
 	Achats et stocks
-	}{16/10/2006 : 21}
+	}{16/10/2006 : 21}
 
-\def{SAP/PP}
+\definition{SAP/PP}
 {
 	Gestion de la production
-	}{16/10/2006 : 21}
+	}{16/10/2006 : 21}
 
-\def{SAP/SD}
+\definition{SAP/SD}
 {
 	Administration des ventes
-	}{16/10/2006 : 20}
+	}{16/10/2006 : 20}
 
-\def{SCM}
+\definition{SCM}
 {
 	Supply Chain Management
-	}{16/10/2006 : 3->6}
+	}{16/10/2006 : 3->6}
 	
-\def{SCOR}
+\definition{SCOR}
 {
 	Supply Chain Operations Reference.
-	Composé de : 
+	Composé de : 
 	\begin{itemize}
-	\item Planification
-	\item Approvisionnement
-	\item Production
-	\item Distribution
-	\item Retour
-	\end{itemize}
-	}{16/10/2006 : 7->10}
+		\item Planification
+		\item Approvisionnement
+		\item Production
+		\item Distribution
+		\item Retour
+	\end{itemize}~
+	}{16/10/2006 : 7->10}
 
-\def{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/le_SMED.htm}{SMED}}
+\definition{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/le_SMED.htm}{SMED}}
 {
 	Single Minute Exchange of Die.
 	Appliqué pour diminuer le temps de production.
 	Le SMED induit des investissements.
-	Le SMED est une méthode d’organisation qui cherche à réduire de façon systématique le temps de changement de série, avec un objectif quantifié.\\
+	Le SMED est une méthode d'organisation qui cherche à réduire de façon systématique le temps de changement de série, avec un objectif quantifié.\\
 	(norme AFNOR NF X50-310 ).\\
-	Dans de nombreuses \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/lentreprise.htm}{entreprises}, \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLetempsdechangementdeserie.htm}{les temps de changement de série} trop importants provoquent une perte de productivité. (pendant ce temps, les \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/machines.htm}{machines} ne sont pas utilisées). L’augmentation de la taille des \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gleslots.htm}{lots} est alors tentante pour effectuer ces changements le moins souvent possible. Le SMED donne de meilleurs résultats sans obliger chaque fois à de gros investissements.
+	Dans de nombreuses \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/lentreprise.htm}{entreprises}, \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLetempsdechangementdeserie.htm}{les temps de changement de série} trop importants provoquent une perte de productivité. (pendant ce temps, les \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/machines.htm}{machines} ne sont pas utilisées). L'augmentation de la taille des \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gleslots.htm}{lots} est alors tentante pour effectuer ces changements le moins souvent possible. Le SMED donne de meilleurs résultats sans obliger chaque fois à de gros investissements.
 	Cette méthode se décompose en quatre phases :
 	\begin{itemize}
-	\item L’analyse : La méthode de changement de série actuelle est découpée en \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/glesoper.htm}{opérations} élémentaires.
-	\item L’étude : Il faut distinguer les opérations internes (qui ne peuvent être réalisées que quand la machine est arrêtée), des opérations externes (qui peuvent être effectuées sans arrêt de la machine). Celles-ci seront à réaliser avant l’arrêt de la machine. Le temps nécessaire à l’exécution de ces opérations est ainsi économisé, ce qui réduit considérablement le temps de changement de série.
-	La transformation : Moyennant investissement, les opérations internes restantes seront changées en opérations externes. Par exemple, un moule qui était préchauffé sur une machine, pourra être préchauffé dans une étuve. En investissant dans une étuve, le temps de préchauffage n’intervient plus lors du changement de série.
-	La réduction de temps de réalisation des opérations internes restantes. Il s’agit d’engager enfin des actions pour que les opérations internes prennent le moins de temps possible. Les machines pourront par exemple être équipées de serrages rapides d’outils.
-	Le SMED est une méthode efficace , basée uniquement sur les pratiques existantes pour le changement de fabrication. Dans la plupart des cas, il est possible d’obtenir des temps de changement de fabrication inférieurs à 10 minutes, alors qu’ils prenaient auparavant plusieurs heures. Le temps d’arrêt des machines et la taille des lots sont ainsi réduits. Les délais clients peuvent alors être respectés. Une telle restructuration induit des coûts moins élevés à terme, compte tenu du gain de productivité.
+		\item L'analyse : La méthode de changement de série actuelle est découpée en \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/glesoper.htm}{opérations} élémentaires.
+		\item L'étude : Il faut distinguer les opérations internes (qui ne peuvent être réalisées que quand la machine est arrêtée), des opérations externes (qui peuvent être effectuées sans arrêt de la machine). Celles-ci seront à réaliser avant l'arrêt de la machine. Le temps nécessaire à l'exécution de ces opérations est ainsi économisé, ce qui réduit considérablement le temps de changement de série.
+		\item La transformation : Moyennant investissement, les opérations internes restantes seront changées en opérations externes. Par exemple, un moule qui était préchauffé sur une machine, pourra être préchauffé dans une étuve. En investissant dans une étuve, le temps de préchauffage n'intervient plus lors du changement de série.
+		\item La réduction de temps de réalisation des opérations internes restantes. Il s'agit d'engager enfin des actions pour que les opérations internes prennent le moins de temps possible. Les machines pourront par exemple être équipées de serrages rapides d'outils.
+	\end{itemize}
+	Le SMED est une méthode efficace , basée uniquement sur les pratiques existantes pour le changement de fabrication. Dans la plupart des cas, il est possible d'obtenir des temps de changement de fabrication inférieurs à 10 minutes, alors qu'ils prenaient auparavant plusieurs heures. Le temps d'arrêt des machines et la taille des lots sont ainsi réduits. Les délais clients peuvent alors être respectés. Une telle restructuration induit des coûts moins élevés à terme, compte tenu du gain de productivité.
 	}{}
 	
-\def{Stock}
+\definition{Stock}
 {
 	Constitué lorsque la quantité économique est supérieure à la demande
 	}{}
 
-\def{Stock disponible}
+\definition{Stock disponible}
 {
-	$ = stock réel + entrées prévisionnelles$
+	 = stock réel + entrées prévisionnelles
 	}{}
 	
-\def{Stock libre ou disponible}
+\definition{Stock libre ou disponible}
 {
-	L’approvisionnement du composant dans le cas de \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLagestionsurconsommation.htm}{gestion} sur consommation se fait à partir de stock libre, sans réservation.
+	L'approvisionnement du composant dans le cas de \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLagestionsurconsommation.htm}{gestion} sur consommation se fait à partir de stock libre, sans réservation.
 	}{}
 
-\def{Stock prévisionnel}
+\definition{Stock prévisionnel}
 {
-	C’est la différence entre le plan de production et les prévisions de vente, plus le stock restant du mois précédent.
+	C'est la différence entre le plan de production et les prévisions de vente, plus le stock restant du mois précédent.
 	}{}
 	
-\def{Stock de sécurité}
+\definition{Stock de sécurité}
 {
 	Stock constitué pour palier aux aléas des délais de livraison, des quantités livrées et de la consommation pendant le délai de livraison.
 	}{}
 
-\def{Stock spécifique}
+\definition{Stock spécifique}
 {
-	Ce \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/Le_stock/lestock.htm}{stock} est utilisé dans le cas de \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLagestionalacommande.htm}{gestion à la commande}. Chaque commande fera l’objet d’une gestion spécifique et devra disposer à ce titre de stocks spécifiques.
+	Ce \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/Le_stock/lestock.htm}{stock} est utilisé dans le cas de \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLagestionalacommande.htm}{gestion à la commande}. Chaque commande fera l'objet d'une gestion spécifique et devra disposer à ce titre de stocks spécifiques.
 	}{}
 
-\def{Stock sur réservation}
+\definition{Stock sur réservation}
 {
-	L’approvisionnement de tout composant géré par la méthode \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gleMRPetleMRP2.htm}{MRP} se fait à partir d’un stock faisant l’objet de réservation.
+	L'approvisionnement de tout composant géré par la méthode \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gleMRPetleMRP2.htm}{MRP} se fait à partir d'un stock faisant l'objet de réservation.
 	}{}
 	
-\def{Structure en A}
+\definition{Structure en A}
 {
 	Structure convergente en A
-	}{07/11/2006 : 4}
+	}{07/11/2006 : 4}
 	
-\def{Structure en V}
+\definition{Structure en V}
 {
 	Structure divergente en V
-	}{07/11/2006 : 4}
+	}{07/11/2006 : 4}
 	
-\def{Structure en X}
+\definition{Structure en X}
 {
 	V sur un A
-	}{07/11/2006 : 5}
+	}{07/11/2006 : 5}
 	
-\def{Système asynchrone}
+%\definition{Système asynchrone}
 {
-	Dans ce système de transfert, les pièces sont transportées de façon indépendante les unes des autres .
-Bien sûr, pour rentabiliser cette solution, il faut pouvoir disposer d’un nombre minimum de places dans le \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/Le_stock/lestock.htm}{stock} intermédiaire ou sur le système de transfert et pouvoir faire travailler les postes sur des plages de temps différentes. C’est par exemple le cas des postes en dérivation sur un transfert libre.
+	Dans ce système de transfert, les pièces sont transportées de façon indépendante les unes des autres.
+Bien sûr, pour rentabiliser cette solution, il faut pouvoir disposer d'un nombre minimum de places dans le \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/Le_stock/lestock.htm}{stock} intermédiaire ou sur le système de transfert et pouvoir faire travailler les postes sur des plages de temps différentes. C'est par exemple le cas des postes en dérivation sur un transfert libre.
 	}{}
 	
-\def{Système synchrone}
+\definition{Système synchrone}
 {
-	Le principe est d’avoir un outil pour déplacer à un instant précis toutes les pièces d’un poste au poste suivant. Dans ce cas le rythme de la ligne est évidemment celui du \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/glespostegoulet.htm}{poste goulet}. Des techniques d’équilibrage permettent de répartir les opérations sur les postes de manière à minimiser les écarts de temps opératoires.
+	Le principe est d'avoir un outil pour déplacer à un instant précis toutes les pièces d'un poste au poste suivant. Dans ce cas le rythme de la ligne est évidemment celui du \href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/glespostegoulet.htm}{poste goulet}. Des techniques d'équilibrage permettent de répartir les opérations sur les postes de manière à minimiser les écarts de temps opératoires.
 Ce système de transfert est, du point de vue conception et pilotage, le plus facile à mettre en place et à gérer.
 	}{}
 	
-\def{Taux de service de l’entreprise}
+\definition{Taux de service de l'entreprise}
 {
-	Taux de service de l’entreprise
-	}{16/10/2006 : 4}
+	Taux de service de l'entreprise
+	}{16/10/2006 : 4}
 	
-\def{Temps de transfert}
+\definition{Temps de transfert}
 {
-	Le temps de transfert représente le temps nécessaire pour que les pièces transitent d’une phase à la suivante. Pour la dernière phase, le temps de transfert représente le temps nécessaire pour mettre les pièces dans le stock.
+	Le temps de transfert représente le temps nécessaire pour que les pièces transitent d'une phase à la suivante. Pour la dernière phase, le temps de transfert représente le temps nécessaire pour mettre les pièces dans le stock.
 	}{}
 	
-\def{Transfert}
+\definition{Transfert}
 {
-	Le transfert est une \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/actions.htm}{action} destinée à modifier la localisation d’un article ou d’un \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/lencours.htm}{en-cours}.\\
+	Le transfert est une \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/actions.htm}{action} destinée à modifier la localisation d'un article ou d'un \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/lencours.htm}{en-cours}.\\
 	(norme AFNOR NF X50-310 ).\\
-	Divers types de transfert existent :
+	Divers types de transfert existent :
 	\begin{itemize}
 	\item transfert continu
 	\item système asynchrone
 	\item système synchrone
 	\end{itemize}
-	Amélioration du transfert : Avant de chercher à améliorer le transfert, celui-ci n’étant générateur d’aucune valeur ajoutée, il convient de chercher à le réduire par une optimisation de l’implantation des \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/lepostedetrav.htm}{postes de travail} au sein de l’atelier.
+	Amélioration du transfert : Avant de chercher à améliorer le transfert, celui-ci n'étant générateur d'aucune valeur ajoutée, il convient de chercher à le réduire par une optimisation de l'implantation des \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/lepostedetrav.htm}{postes de travail} au sein de l'atelier.
 	}{}
 	
-\def{Transfert continu}
+\definition{Transfert continu}
 {
-	Dans le transfert continu, les articles se déplacent à vitesse constante, ce sont les \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/lepostedetrav.htm}{postes de travails} qui forment des cycles au dessus de la ligne. Ce transport doit être utilisé pour les produits ne supportant pas les accélérations (\href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLeproduit.htm}{produits} liquides en bouteille, produits pharmaceutiques, ...). C’est par exemple le cas de chaînes de montages d’automobiles où l’opérateur se déplace le long de la ligne.
+	Dans le transfert continu, les articles se déplacent à vitesse constante, ce sont les \href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/lepostedetrav.htm}{postes de travails} qui forment des cycles au dessus de la ligne. Ce transport doit être utilisé pour les produits ne supportant pas les accélérations (\href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLeproduit.htm}{produits} liquides en bouteille, produits pharmaceutiques, ...). C'est par exemple le cas de chaînes de montages d'automobiles où l'opérateur se déplace le long de la ligne.
 	}{}
 	
-\def{Variation de stock}
+\definition{Variation de stock}
 {
-	C’est la différence entre le plan de production et les prévisions de vente.
+	C'est la différence entre le plan de production et les prévisions de vente.
 	}{}
 	
-\def{Wilson}
+\definition{Wilson}
 {
 	Modèle de Wilson (gestion sur stock).\\
 	Prend en compte les coûts de possession et de lancement des stocks pour déterminer la quantité économique.
-	}{23/10/2006 : 4->6}
+	}{23/10/2006 : 4->6}
 		
-\def{Woodward}
+\definition{Woodward}
 {
 	Classification de Woodward
 	Projet/Atelier/Masse/Process
-	}{07/11/2006 : 6}
-	
+	}{07/11/2006 : 6}
 	
 \end{document}
