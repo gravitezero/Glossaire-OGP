@@ -1,30 +1,65 @@
-\documentclass[12pt,a4paper,twoside]{article}
+\documentclass[12pt,a4paper]{article}
 
-\usepackage{hyperref}
+\usepackage[top=20mm, bottom=20mm, left=25mm, right=25mm]{geometry}
+\usepackage[T1]{fontenc} 
 \usepackage[utf8]{inputenc}
 \usepackage{xifthen}
 \usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{hyperref}
+\usepackage{setspace}
+
+
 
 \title{Glossaire OGP}
-\author{texification : Etienne Brodu}
+\author{\TeX{}ification : Étienne \textsc{Brodu} \and Mise en page : Paul \textsc{Adenot}}
 \date{Novembre 2010}
+
+\newcommand{\fontlignedroite}[1]{%
+    \textsf{\Large{\textbf{#1}}}
+}
+
+\newlength{\largeurtitre}
+\newlength{\largeurligne}
+\newcommand{\lignedroite}[1]{%
+    \setlength{\largeurtitre}{0pt}
+    \setlength{\largeurligne}{0pt}
+    \settowidth{\largeurtitre}{\fontlignedroite{#1}}
+    \addtolength{\largeurligne}{\textwidth}
+    \addtolength{\largeurligne}{-\largeurtitre}
+    \addtolength{\largeurligne}{-4pt}
+    \bigskip
+    \fontlignedroite{#1} \raisebox{0.3em}{\vrule depth 0pt height 0.6pt width
+	\largeurligne}%
+}
+
+\newcommand{\lignegauche}[1]{%
+    \setlength{\largeurtitre}{0pt}
+    \setlength{\largeurligne}{0pt}
+    \settowidth{\largeurtitre}{\fontlignedroite{#1}}
+    \addtolength{\largeurligne}{\textwidth}
+    \addtolength{\largeurligne}{-\largeurtitre}
+    \addtolength{\largeurligne}{-4pt}
+    \bigskip
+    \raisebox{0.3em}{\vrule depth 0pt height 0.6pt width \largeurligne} #1%
+}
+
 
 \newcommand{\definition}[3]{
 	\begin{minipage}{\textwidth}
-		\textbf{\large{#1}}\\
-		\rule{\textwidth}{0.5pt}
+		\lignedroite{#1}\\
 		#2\\
-		\ifthenelse{\isempty{#3}}%
-	    {}%
-	    {\rule{\textwidth}{0.25pt}\\\textit{#3}}%
+	\ifthenelse{\isempty{#3}}%
+	    {\raisebox{0.3em}{\vrule depth 0pt height 0.6pt width \textwidth}}%
+	    {\lignegauche{\footnotesize \textit{#3}}}%
     \end{minipage}
     \\\\
 }
 
+\begin{spacing}{1.2}
+
 \begin{document}
 \maketitle
-\newpage
-~
 \newpage
 
 \definition{Action}
@@ -232,7 +267,7 @@ C'est l'ensemble des articles en atelier, sur les \href{http://gpr.insa-lyon.fr/
 \definition{ERP}
 {
 	Entreprise Requirements Planning
-	}{16/10/2006 : 7-22->26}	
+	}{16/10/2006 : 7-22~$\rightarrow$~26}	
 				
 \definition{ETO}
 {
@@ -419,7 +454,7 @@ Le jalonnement est effectué dans la plupart des cas à capacité illimitée.
 	Sur un planning Kanban, un ticket Kanban doit absolument être prélevé si le nombre de tickets dépasse le niveau d'alerte.
 	Le nombre de containers vides se voit sur un planning Kanban par le nombre d'étiquettes et non par le nombre d'encoches libres.
 	Fonctionne bien pour des petites séries et du personnel polyvalent.
-	}{23/10/2006 : 7->9}
+	}{23/10/2006 : 7~$\rightarrow$~9}
 		
 \definition{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/La_gestion_de_production/Le_pilotage_des_taches_et_des_ressources/le_lancement.htm}{Lancement}}
 {
@@ -501,24 +536,24 @@ L'ordre est alors exécutoire.\\
 	Management Ressource Planning (flux poussés).
 	Calcul des approvisionnements en fonction des demandes en produits finis.
 	Calcul des besoins nets.
-	}{06/11/2006 : 2\\8/11/2006 : 3}
+	}{06/11/2006 : 2 et 8/11/2006 : 3}
 	
 \definition{MRP 0}
 {
 	Calcul des besoins en composants.
 	A court terme (3 à 6 mois avec révision hebdomadaire).
-	}{06/11/2006 : 2->9\\8/11/2006 : 8}
+	}{06/11/2006 : 2~$\rightarrow$~9 et 8/11/2006 : 8}
 	
 \definition{MRP 1}
 {
 	Méthode de régulation de la production
-	}{06/11/2006 : 9->12\\8/11/2006 : 8}
+	}{06/11/2006 : 9~$\rightarrow$~12 et 8/11/2006 : 8}
 	
 \definition{MRP 2}
 {
 	Méthode des ressources de production.
 	Manufacturing Ressource Planning.
-	}{06/11/2006 : 2\\8/11/2006 : 7}
+	}{06/11/2006 : 2 et 8/11/2006 : 7}
 	
 \definition{MRP 3}
 {
@@ -618,7 +653,7 @@ Nous appellerons donc ordonnancement au sens restreint ou ordonnancement détail
 	Il sert à déterminer les besoins indépendants.
 	Il constitue l'entrée du calcul des besoins nets.
 	PDP à double niveau en différenciation retardée.
-	}{8/11/2006 : 3->7}	
+	}{8/11/2006 : 3~$\rightarrow$~7}	
 
 \definition{PDP TODO (PDDP?)}
 {
@@ -785,7 +820,7 @@ Pour un problème d'\href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLordo
 \definition{SCM}
 {
 	Supply Chain Management
-	}{16/10/2006 : 3->6}
+	}{16/10/2006 : 3~$\rightarrow$~6}
 	
 \definition{SCOR}
 {
@@ -798,7 +833,7 @@ Pour un problème d'\href{http://gpr.insa-lyon.fr/supgedem/Home/glossaire/gLordo
 		\item Distribution
 		\item Retour
 	\end{itemize}~
-	}{16/10/2006 : 7->10}
+	}{16/10/2006 : 7~$\rightarrow$~10}
 
 \definition{\href{http://gpr.insa-lyon.fr/supgedem/Home/Le_monde_industriel/L_entreprise/Le_systeme_physique_de_production/le_SMED.htm}{SMED}}
 {
@@ -917,7 +952,7 @@ Ce système de transfert est, du point de vue conception et pilotage, le plus fa
 {
 	Modèle de Wilson (gestion sur stock).\\
 	Prend en compte les coûts de possession et de lancement des stocks pour déterminer la quantité économique.
-	}{23/10/2006 : 4->6}
+	}{23/10/2006 : 4~$\rightarrow$~6}
 		
 \definition{Woodward}
 {
@@ -925,4 +960,5 @@ Ce système de transfert est, du point de vue conception et pilotage, le plus fa
 	Projet/Atelier/Masse/Process
 	}{07/11/2006 : 6}
 	
+\end{spacing}
 \end{document}
